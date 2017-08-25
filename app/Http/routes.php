@@ -33,3 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     //Want&Have一覧
     Route::resource('users', 'UsersController', ['only' => ['show']]); 
 });
+
+// ランキング
+Route::get('ranking/want', 'RankingController@want')->name('ranking.want');
+Route::get('ranking/have', 'RankingController@have')->name('ranking.have');
